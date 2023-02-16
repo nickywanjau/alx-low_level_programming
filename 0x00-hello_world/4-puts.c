@@ -1,6 +1,8 @@
 #include <stdio.h>
-/*
- * main is the main part of the code
+
+/**
+ * main runs the main  code
+ *
  * return 0 if program is completed
  */
 int main(void)
