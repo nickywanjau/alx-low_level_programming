@@ -1,30 +1,35 @@
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
-* main - Prints the digits of the decimal number system using putchar
-*
-* Return: 0 when code executes succesfully
-*/
-
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int a, b;
+	int d = 48, a = 48;
 
-	for (a = 0; a < 10; a++)
+	while (d < 58)
 	{
-		for (b = 0; b < 10; b++)
+		a = 48;
+		while (a < 58)
 		{
-			putchar(a + '0');
-			putchar(b + '0');
-			if (a == 9 && b == 9)
+			if (d != a && d < a)
 			{
-				break;
+				putchar(d);
+				putchar(a);
+
+				if (!(d == 56 && a == 57))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-				putchar(',');
-				putchar(' ');
+			a++;
 		}
+		d++;
 	}
 	putchar('\n');
+
 	return (0);
 }
